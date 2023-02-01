@@ -1,10 +1,12 @@
-﻿
-# Edge Options
+# Script to open a bunch of tabs in Edge and seach using Bing on a random word.
+
+# Other possible Edge Options
 # --new-window
 
-# Start-Process Options
+# Other possible Start-Process Options
 # -wait
 
+# Function to get a random word
 function Get-RandomWord
 {
  if(-not $words)
@@ -14,7 +16,7 @@ function Get-RandomWord
  $words["$(get-random -Maximum ($words.count))"]
 }
 
-
+##### MAIN #####
 $word=1
 for (;$word -lt 40;$word++)
 {
